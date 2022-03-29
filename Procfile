@@ -1,0 +1,1 @@
+web:gunicorn PostmanProject.wsgi --log-file -
