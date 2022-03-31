@@ -7,9 +7,9 @@ import csv
 @api_view(['GET'])
 def saveUsername(request):
     username = request.GET.get('username')
-    fil = open('PostmanApp/Users.txt', 'a+')
+    fil = open('New_PostmanApp/Users.txt', 'a+')
     status = 'User Not Saved'
-    with open('PostmanApp/Users.txt') as myfile:
+    with open('New_PostmanApp/Users.txt') as myfile:
         if username in myfile.read():
             status = "User Already Exists"
         else:
@@ -62,7 +62,7 @@ def checkUsername(request):
 # Getting the content from Products.csv and storing in a file
 @api_view(['GET'])
 def viewProducts(request):
-    csv_file= open('PostmanApp/Products.csv')
+    csv_file= open('New_PostmanApp/Products.csv')
     csv_reader= csv.reader(csv_file, delimiter =',')
     line_cout = 0
     display = []
