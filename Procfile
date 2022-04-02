@@ -1,1 +1,1 @@
-web:gunicorn New_Postman.wsgi --log-file -
+web: gunicorn New_Postman.wsgi --log-file -
